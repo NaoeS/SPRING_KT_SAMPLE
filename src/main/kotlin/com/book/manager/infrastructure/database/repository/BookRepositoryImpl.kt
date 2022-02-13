@@ -25,10 +25,10 @@ class BookRepositoryImpl(
     override fun findAllWithRental(): List<BookWithRental> {
         return bookWithRentalMapper.select().map { toModel(it) }
     }
-//
-//    override fun findWithRental(id: Long): BookWithRental? {
-//        return bookWithRentalMapper.selectByPrimaryKey(id)?.let { toModel(it) }
-//    }
+
+    override fun findWithRental(id: Long): BookWithRental? {
+        return bookWithRentalMapper.selectByPrimaryKey(id)?.let { toModel(it) }
+    }
 //
 //    override fun register(book: Book) {
 //        bookMapper.insert(toRecord(book))
